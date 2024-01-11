@@ -17,8 +17,9 @@
             border: 1px solid;
             height: 50px;
         }
-        tr:nth-child(odd) {
-      background-color: #ff0d0d;
+        tr:nth-child(odd) td:nth-child(even),
+        tr:nth-child(even) td:nth-child(odd) {
+            background-color: #484242; /* Cambia el color de fondo para las celdas impares en filas impares y celdas pares en filas pares */
         }
         td {
             border: 1px solid;
