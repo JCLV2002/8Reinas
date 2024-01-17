@@ -10,9 +10,12 @@ function colocarReina(celda) {
          /*Bloqueamos renglon */
          var tablero = document.getElementById("tabla");
          alert(renglon + "" + columna);
-         for (let index = 0; index < 8; index++) {
-            if (columna != index) {
-               tablero.rows[renglon].cells[index].removeAttribute("onclick");
+         for (let i = 0; i < 8; i++) {
+            if (columna != i) {
+               tablero.rows[renglon].cells[i].removeAttribute("onclick");
+            }
+            if (renglon != i) {
+               tablero.rows[i].cells[columna].removeAttribute("onclick");
             }
          } 
          reinasPorColocar--;
@@ -20,6 +23,15 @@ function colocarReina(celda) {
       }
    } else {
       celda.style = " background-image: none;";
+      var renglon = celda.parentElement.rowIndex;
+         var columna = celda.cellIndex;
+         /*Bloqueamos renglon */
+         var tablero = document.getElementById("tabla");
+         alert(renglon + "" + columna);
+         for (let i = 0; i < 8; i++) {
+            tablero.rows[renglon].cells[i].setAttribute("onclick","colocarReina(this)");
+            tablero.rows[i].cells[columna].setAttribute("onclick","colocarReina(this)");
+         }
       reinasPorColocar++;
       reinascolocadas--;
    }
