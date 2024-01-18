@@ -18,6 +18,25 @@ function colocarReina(celda) {
                tablero.rows[i].cells[columna].removeAttribute("onclick");
             }
          } 
+
+         //recoremos diagonales de izquierda y derecha 
+         var r = renglon;
+         var c = columna;
+
+         while (r >= 0 && c < 8) {
+            tablero.rows[r].cells[c].style.backgroundColor = "#ff0000";
+            r -- ;
+            c++ ;
+         }
+         r = renglon + 1;
+         c = columna -1 ;
+         while (c >= 0 && r < 8) {
+            tablero.rows[r].cells[c].style.backgroundColor = "#ff0000";
+            r ++ ;
+            c --;
+         }
+         
+
          reinasPorColocar--;
          reinascolocadas++;
       }
