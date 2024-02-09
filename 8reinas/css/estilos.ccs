@@ -1,29 +1,68 @@
 table {
-    border-collapse: collapse;
-    /*definimos el color de la linea*/
-    border: 1px solid;
-  }
-  tr {
-    border: 1px solid;
-    height: 50px;
-  }
-  
-  /*tr:nth-child(odd) td:nth-child(even),*/
-  /*tr:nth-child(even) td:nth-child(odd) {*/
-  /*  background-color: #CACA22; /* Cambia el color de fondo para las celdas impares en filas impares y celdas pares en filas pares */
-  /*}*/
+  border-collapse: collapse;
+  width: 400px;
+  height: 400px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+  background: linear-gradient(45deg, #1c1c1c, #383838); 
+}
 
-  tr:nth-child(even) td:nth-child(even), tr:nth-child(odd) td:nth-child(odd)
-        {
-            background: #1F27D6;
-        }
-        
-        tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd) 
-        {
-            background: #000;
-        }
+td {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff; /* Texto en blanco */
+}
 
-  td {
-    border: 1px solid;
-    width: 50px;
-  }
+tr:nth-child(odd) td:nth-child(odd),
+tr:nth-child(even) td:nth-child(even) {
+  background-color: #3f3f3f; 
+}
+
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+  background-color: #555; 
+}
+#reinasColoca, #reinasColoca1 {
+  color: #fff; /* Texto en blanco */
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#div_button {
+  text-align: center;
+}
+
+.button {
+  background-color: #4CAF50; /* Color de fondo */
+  border: none;
+  color: white;
+  padding: 10px 20px; /* Espaciado interno */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s; /* Duración de la transición */
+}
+
+.button:hover {
+  background-color: #45a049; /* Cambio de color al pasar el ratón */
+}
+
+#div_button button {
+  background-color: #f44336; /* Color de fondo para el botón de reinicio */
+}
+
+#div_button button:hover {
+  background-color: #008000; /* Cambio de color al pasar el ratón sobre el botón de reinicio */
+}
+
+body {
+  background-color: #000000; 
+}
